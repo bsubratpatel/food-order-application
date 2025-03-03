@@ -23,19 +23,19 @@ const Index: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="text-center max-w-xl mx-auto mb-16"
+        className="text-center max-w-xl mx-auto mb-16 px-4 md:px-0"
       >
-        <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-6">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-4 md:mb-6">
           Hungry?
         </h1>
-        <p className="text-lg text-gray-600 mb-8">
+        <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 mx-auto max-w-md">
           The simplest way to satisfy your cravings with just one click.
         </p>
         <FoodButton onClick={handleOrderClick} />
       </motion.div>
       
       <motion.div 
-        className="absolute bottom-4 text-center text-gray-400 text-sm"
+        className="absolute bottom-4 text-center text-gray-400 text-xs md:text-sm w-full px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
