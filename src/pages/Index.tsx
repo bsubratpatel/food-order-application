@@ -20,6 +20,20 @@ const Index: React.FC = () => {
       <RoastMessage isVisible={showRoast} onAnimationComplete={handleCloseRoast} />
       
       <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        className="mb-8 md:mb-12"
+      >
+        <div className="flex items-center justify-center">
+          <span className="text-4xl md:text-5xl font-bold text-[#403E43]">
+            <span className="text-[#9b87f5]">Lazy</span>
+            <span className="text-[#F97316]">Bites</span>
+          </span>
+        </div>
+      </motion.div>
+      
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -40,7 +54,7 @@ const Index: React.FC = () => {
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
       >
-        Designed with simplicity in mind
+        LazyBites - Designed with simplicity in mind
       </motion.div>
     </div>
   );
