@@ -16,28 +16,29 @@ const Index: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 p-4">
-      <RoastMessage isVisible={showRoast} onAnimationComplete={handleCloseRoast} />
-      
+    <div className="min-h-screen flex flex-col bg-gradient-to-b from-gray-50 to-gray-100 p-4 relative">
+      {/* Logo in top left corner */}
       <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, x: -20 }}
+        animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="mb-8 md:mb-12"
+        className="absolute top-4 left-4 md:top-6 md:left-6"
       >
-        <div className="flex items-center justify-center">
-          <span className="text-4xl md:text-5xl font-bold text-[#403E43]">
+        <div className="flex items-center">
+          <span className="text-2xl md:text-3xl font-bold text-[#403E43]">
             <span className="text-[#9b87f5]">Lazy</span>
             <span className="text-[#F97316]">Bites</span>
           </span>
         </div>
       </motion.div>
       
+      <RoastMessage isVisible={showRoast} onAnimationComplete={handleCloseRoast} />
+      
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="text-center max-w-xl mx-auto mb-16 px-4 md:px-0"
+        className="text-center max-w-xl mx-auto mb-16 px-4 md:px-0 mt-24 md:mt-20"
       >
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-4 md:mb-6">
           Hungry?
