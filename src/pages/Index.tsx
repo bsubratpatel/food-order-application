@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import FoodButton from "@/components/FoodButton";
@@ -37,7 +38,7 @@ const Index: React.FC = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-        className="text-center max-w-xl mx-auto mb-16 px-4 md:px-0 mt-24 md:mt-20"
+        className="text-center max-w-xl mx-auto flex-1 flex flex-col justify-center items-center px-4 md:px-0"
       >
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-4 md:mb-6">
           Hungry?
