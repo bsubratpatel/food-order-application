@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import FoodButton from "@/components/FoodButton";
@@ -25,7 +24,7 @@ const Index: React.FC = () => {
         className="absolute top-4 left-4 md:top-6 md:left-6"
       >
         <div className="flex items-center">
-          <span className="text-2xl md:text-3xl font-bold text-[#403E43]">
+          <span className="text-xl md:text-2xl font-bold text-[#403E43]">
             <span className="text-[#9b87f5]">Lazy</span>
             <span className="text-[#F97316]">Bites</span>
           </span>
